@@ -3,30 +3,36 @@
 
 <head>
 
-<meta name="keywords" content="JavaScript, WebRTC" />
-<meta name="description" content="WebRTC codelab" />
-<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta name="keywords" content="JavaScript, WebRTC" />
+    <meta name="description" content="WebRTC codelab" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles/flat-ui.css">
+    <title>WebRTC codelab: step 1</title>
 
-<title>WebRTC codelab: step 1</title>
+    <!-- When we finish the codelab we'll move CSS and JavaScript to separate files -->
 
-<!-- When we finish the codelab we'll move CSS and JavaScript to separate files -->
-
-<!-- CSS will go here -->
-<style>
-</style>
+    <!-- CSS will go here -->
+    <style>
+    </style>
 
     <script src='js/lib/adapter.js'></script>
 
 </head>
 
-<body>
+<body ng-app="rtcForay">
 
+<main id="mainContainer" ng-controller="mainCtrl">
+    <div role="banner">
+        <nav  role="navigation" class="navigation">
+            <div class="navigation-container"><ul class="logo-navigation"><li><a href="#">{{rtc.name}}</a></li></ul></div>
+        </nav>
+    </div>
+</main>
 <!-- HTML will go here -->
 
 <!-- JavaScript will go here -->
 <script type="application/javascript" src="bower_components/angular/angular.js"></script>
-<script>
-</script>
+<script type="application/javascript" src="js/app/app.js"></script>
 
 </body>
 
