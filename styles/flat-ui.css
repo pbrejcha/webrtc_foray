@@ -3116,6 +3116,7 @@ input[type="radio"] + label {
     margin-left: 0.5rem;
     margin-right: 1rem;
     margin-bottom: 0;
+    padding: 1rem 1rem;
     vertical-align: baseline;
 }
 

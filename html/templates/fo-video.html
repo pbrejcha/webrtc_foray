@@ -1,4 +1,14 @@
 <section class="large-12">
-    <video></video>
+    <video ng-style="videoCss"></video>
     <hr/>
+    <fieldset>
+        <input type="checkbox" ng-model="constraints.audio" id="audioCheckbox">
+        <label for="audioCheckbox" class="inline label secondary">
+            Audio
+        </label>
+        <input type="range" min="0" max="500" ng-model="cssObj.filter.saturation" ng-change="onVideoCssChange()">
+        <!--<input type="text" ng-model="constraints.video."-->
+    </fieldset>
+
+    <button ng-click="showVideo()" class="button success ">Show Video</button>
 </section>
