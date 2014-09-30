@@ -2,22 +2,23 @@ angular.module('rtcForay').controller('foVideoCtrl', ['$scope', function ($scope
     $scope.constraints = {
         video:true
     };
-
+    $scope.error = false;
     $scope.videoCss = {
-        "-webkit-filter": ""
+        "-webkit-filter": "",
+        "hue-rotate": ""
     };
-    $scope.cssObj = {
-        filter :{
-            saturation: 0
-        }
-    };
+    $scope.filter = {
+            'saturation': 0,
+            'hueRotate': 0
+        };
 
     $scope.onVideoCssChange = function () {
-        $scope.videoCss['-webkit-filter'] = "saturate(" + $scope.cssObj.filter.saturation + "%)";
-        console.log($scope.videoCss['-webkit-filter']);
+        $scope.videoCss['-webkit-filter'] =
+            "saturate(" + $scope.filter.saturation + "%) hue-rotate(" + $scope.filter.hueRotate + "deg)";
     };
 
     $scope.showVideo = function () {
+        $scope.error = false;
         navigator.getUserMedia = navigator.getUserMedia ||
             navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
@@ -29,6 +30,7 @@ angular.module('rtcForay').controller('foVideoCtrl', ['$scope', function ($scope
         }
 
         function errorCallback(error){
+            $scope.error = true;
             console.log("navigator.getUserMedia error: ", error);
         }
 

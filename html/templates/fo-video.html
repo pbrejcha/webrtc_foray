@@ -1,12 +1,14 @@
 <section class="large-12">
     <video ng-style="videoCss"></video>
     <hr/>
+    <div ng-show="error" class="alert-box alert round">You must let the browser access your webcam or microphone to use this app.</div>
     <fieldset>
         <input type="checkbox" ng-model="constraints.audio" id="audioCheckbox">
         <label for="audioCheckbox" class="inline label secondary">
             Audio
         </label>
-        <input type="range" min="0" max="500" ng-model="cssObj.filter.saturation" ng-change="onVideoCssChange()">
+        <input type="range" min="0" max="500" ng-model="filter.saturation" ng-change="onVideoCssChange()">
+        <input type="range" min="0" max="500" ng-model="filter.hueRotate" ng-change="onVideoCssChange()">
         <!--<input type="text" ng-model="constraints.video."-->
     </fieldset>
 
