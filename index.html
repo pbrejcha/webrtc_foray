@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="rtcForay">
 
 <head>
 
@@ -19,13 +19,13 @@
 
 </head>
 
-<body ng-app="rtcForay">
-
-<main id="mainContainer" ng-controller="mainCtrl">
-    <div role="banner">
-        <nav  role="navigation" class="navigation">
-            <div class="navigation-container"><ul class="logo-navigation"><li><a href="#">{{rtc.name}}</a></li></ul></div>
-        </nav>
+<body ng-controller="mainCtrl">
+<nav  role="navigation" class="navigation">
+    <div class="navigation-container"><ul class="logo-navigation"><li><a href="#">{{rtc.name}}</a></li></ul></div>
+</nav>
+<main id="mainContainer">
+    <div class="row">
+        <fo-video></fo-video>
     </div>
 </main>
 <!-- HTML will go here -->
@@ -33,6 +33,7 @@
 <!-- JavaScript will go here -->
 <script type="application/javascript" src="bower_components/angular/angular.js"></script>
 <script type="application/javascript" src="js/app/app.js"></script>
+<script type="application/javascript" src="js/directives/fo-video.js"></script>
 
 </body>
 

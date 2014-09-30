@@ -1,7 +1,7 @@
 angular.module('rtcForay', [])
 
-    .controller('mainCtrl', function ($scope) {
+    .controller('mainCtrl', ['$scope', function ($scope) {
         $scope.rtc = {
             name : 'RTC Foray'
         };
-    });
+    }]);
