@@ -3,13 +3,30 @@
     <hr/>
     <div ng-show="error" class="alert-box alert round">You must let the browser access your webcam or microphone to use this app.</div>
     <fieldset>
-        <input type="checkbox" ng-model="constraints.audio" id="audioCheckbox">
-        <label for="audioCheckbox" class="inline label secondary">
-            Audio
-        </label>
-        <input type="range" min="0" max="500" ng-model="filter.saturation" ng-change="onVideoCssChange()">
-        <input type="range" min="0" max="500" ng-model="filter.hueRotate" ng-change="onVideoCssChange()">
-        <!--<input type="text" ng-model="constraints.video."-->
+        <div class="small-2">
+            <input type="checkbox" ng-model="constraints.audio" id="audioCheckbox">
+            <label for="audioCheckbox" class="label secondary">
+                Audio
+            </label>
+        </div>
+        <div class="small-2">
+            <input type="range" min="0" max="500" ng-model="filter.saturation" ng-change="onVideoCssChange()" class="range-slider" id="filterSaturation">
+            <label for="filterSaturation" class="label secondary">
+                Saturation
+            </label>
+        </div>
+        <div class="small-2">
+            <input type="range" min="0" max="500" ng-model="filter.hueRotate" ng-change="onVideoCssChange()" class="range-slider" id="filterHueRotate">
+            <label for="filterHueRotate" class="label secondary">
+                Hue Rotate
+            </label>
+        </div>
+        <div class="small-2">
+            <input type="range" min="0.0" max="1.0" step="0.01" ng-model="filter.opacity" ng-change="onVideoCssChange()" class="range-slider" id="filterOpacity">
+            <label for="filterOpacity" class="label secondary">
+                Opacity
+            </label>
+        </div>
     </fieldset>
 
     <button ng-click="showVideo()" class="button success ">Show Video</button>

@@ -3111,7 +3111,8 @@ select {
 }
 
 input[type="checkbox"] + label,
-input[type="radio"] + label {
+input[type="radio"] + label,
+input[type="range"] + label{
     display: inline-block;
     margin-left: 0.5rem;
     margin-right: 1rem;

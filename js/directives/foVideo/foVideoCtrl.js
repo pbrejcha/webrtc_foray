@@ -8,13 +8,17 @@ angular.module('rtcForay').controller('foVideoCtrl', ['$scope', function ($scope
         "hue-rotate": ""
     };
     $scope.filter = {
-            'saturation': 0,
-            'hueRotate': 0
-        };
+        'saturation': 50,
+        'hueRotate': 0,
+        'opacity': 1
+    };
 
     $scope.onVideoCssChange = function () {
+        console.log($scope.filter);
         $scope.videoCss['-webkit-filter'] =
-            "saturate(" + $scope.filter.saturation + "%) hue-rotate(" + $scope.filter.hueRotate + "deg)";
+            "saturate(" + $scope.filter.saturation + "%)" +
+            "hue-rotate(" + $scope.filter.hueRotate + "deg)" +
+            "opacity(" + $scope.filter.opacity + ")";
     };
 
     $scope.showVideo = function () {
