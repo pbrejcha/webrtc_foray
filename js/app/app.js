@@ -1,4 +1,4 @@
-angular.module('rtcForay', [])
+var rtcForay = rtcForay ? rtcForay : angular.module('rtcForay', [])
 
     .controller('mainCtrl', ['$scope', function ($scope) {
         $scope.rtc = {

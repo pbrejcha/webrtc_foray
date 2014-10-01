@@ -1,4 +1,4 @@
-angular.module('rtcForay').controller('foVideoCtrl', ['$scope', function ($scope) {
+rtcForay.controller('foVideoCtrl', ['$scope', function ($scope) {
     $scope.constraints = {
         video:true
     };
